@@ -1,4 +1,7 @@
 module.exports = {
+  "features": {
+    "emotionAlias": false,
+  },
   "stories": [
     "../stories/**/*.stories.mdx",
     "../stories/**/*.stories.@(js|jsx|ts|tsx)"

@@ -2,8 +2,7 @@ import React from 'react';
 
 import { ThemeProvider, Typography as MuiTypography } from '@mui/material';
 import './Typography.css';
-import { darkTheme, lightTheme } from '../styles/theme';
-
+import { darkTheme } from '../styles/theme';
 interface TypographyProps {
   /**
    * How the typography variant should be?
@@ -27,8 +26,11 @@ export const Typography = ({
   primary = false,
 }: TypographyProps) => (
   <ThemeProvider theme={darkTheme}>
-    <MuiTypography className={variant}>
-      {children}
-    </MuiTypography>
+    <div>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+      <MuiTypography variant={variant}>
+        {children}
+      </MuiTypography>
+    </div>
   </ThemeProvider>
 );

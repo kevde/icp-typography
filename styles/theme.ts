@@ -1,62 +1,61 @@
-import { Theme, ThemeOptions } from '@mui/material';
-import { red } from '@mui/material/colors';
-import { createTheme } from '@mui/material/styles';
+import { Theme, unstable_createMuiStrictModeTheme } from '@mui/material';
 
-export const darkThemeOptions: ThemeOptions = {
-  palette: {
-    mode: 'dark',
-    text: {
-      primary: 'yellow'
-    },
-    primary: {
-      main: '#3f51b5',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-  },
-};
-
-export const lightThemeOptions: ThemeOptions = {
+export const darkTheme: Theme = unstable_createMuiStrictModeTheme({
   palette: {
     mode: 'light',
-    text: {
-      primary: 'purple'
-    },
     primary: {
-      main: 'yellow',
+      main: '#3fb543',
+      light: '#2e542f',
+      dark: '#325033',
+      contrastText: 'rgba(119,88,88,0.87)',
     },
     secondary: {
-      main: 'yellow',
+      main: '#00f55a',
+      contrastText: 'rgba(86,49,49,0.87)',
+    },
+    text: {
+      secondary: 'rgba(0,0,0,0.54)',
+      disabled: 'rgba(0,0,0,0.21)',
+    },
+    error: {
+      main: '#291d1c',
+      light: '#5c3d39',
+      dark: '#856865',
+      contrastText: '#582020',
     },
   },
-};
-
-export const darkTheme: Theme = createTheme({
   typography: {
     h1: {
-      color: 'blue',
-      fontFamily: "'Montserrat', sans-serif",
+      fontSize: '48pt',
     },
-    s1: {
-      color: 'blue',
-      fontFamily: "'Montserrat', sans-serif",
+    h2: {
+      fontSize: '40pt',
     },
-    allVariants: {
-      fontFamily: "'Montserrat', sans-serif",
+    h3: {
+      fontSize: '32pt',
     },
+    h4: {
+      fontSize: '24pt',
+    },
+    body1: {
+      fontFamily: 'Montserrat',
+    },
+    body2: {
+      fontFamily: 'Montserrat',
+    },
+    caption: {
+      fontFamily: 'Montserrat',
+    },
+    fontFamily: 'Montserrat',
   },
-  palette: {
-    primary: {
-      main: red[500],
-    },
-  },
-})
-
-export const lightTheme: Theme = createTheme({
-  palette: {
-    primary: {
-      main: red[500],
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        @font-face {
+          font-family: 'Montserrat';
+          src: local('Montserrat'), url('https://fonts.googleapis.com/css?family=Montserrat');
+        }
+      `,
     },
   },
 })
