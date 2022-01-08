@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { ThemeProvider, Typography as MuiTypography } from '@mui/material';
+import { CssBaseline, ThemeProvider, Typography as MuiTypography } from '@mui/material';
 import './Typography.css';
-import { darkTheme } from '../styles/theme';
+import { createTheme } from '../styles/theme';
 import { VARIANT_DETAILS } from '../styles/typography';
+
 interface TypographyProps {
   /**
    * How the typography variant should be?
@@ -26,12 +27,13 @@ export const Typography = ({
   mode = 'dark',
   primary = false,
 }: TypographyProps) => (
-  <ThemeProvider theme={darkTheme}>
-      <MuiTypography sx={{
-        ...VARIANT_DETAILS[variant],
-        color: primary ? 'primary.main': mode
-      }}>
-        {children}
-      </MuiTypography>
+  <ThemeProvider theme={createTheme(mode === 'dark')}>
+    <CssBaseline />
+    <MuiTypography sx={{
+      ...VARIANT_DETAILS[variant],
+      color: primary ? 'primary.main': `text.primary`
+    }}>
+      {children}
+    </MuiTypography>
   </ThemeProvider>
 );
