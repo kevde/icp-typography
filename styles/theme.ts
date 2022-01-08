@@ -1,4 +1,5 @@
 import { Theme, unstable_createMuiStrictModeTheme } from '@mui/material';
+import { VARIANT_DETAILS } from './typography'
 
 export const darkTheme: Theme = unstable_createMuiStrictModeTheme({
   palette: {
@@ -25,35 +26,18 @@ export const darkTheme: Theme = unstable_createMuiStrictModeTheme({
     },
   },
   typography: {
-    h1: {
-      fontSize: '48pt',
-    },
-    h2: {
-      fontSize: '40pt',
-    },
-    h3: {
-      fontSize: '32pt',
-    },
-    h4: {
-      fontSize: '24pt',
-    },
-    body1: {
-      fontFamily: 'Montserrat',
-    },
-    body2: {
-      fontFamily: 'Montserrat',
-    },
-    caption: {
-      fontFamily: 'Montserrat',
-    },
     fontFamily: 'Montserrat',
+    allVariants: {
+      fontFamily: 'Montserrat',
+    },
+    ...VARIANT_DETAILS,
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: `
         @font-face {
           font-family: 'Montserrat';
-          src: local('Montserrat'), url('https://fonts.googleapis.com/css?family=Montserrat');
+          src: url('https://fonts.googleapis.com/css?family=Montserrat');
         }
       `,
     },

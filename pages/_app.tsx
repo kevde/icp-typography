@@ -15,11 +15,10 @@ export default function MyApp(props: { Component: any; emotionCache?: EmotionCac
 
   return (
     <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={darkTheme}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={darkTheme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
