@@ -1,41 +1,41 @@
 /* tslint:disable max-line-length */
-declare const secondary: {
+const secondary = {
   /**
    * Preview: ![secondary 100]
    */
-  100: '#DCE4FE';
+  100: '#DCE4FE',
   /**
    * Preview: ![secondary 200]
    */
-  200: '#B9C9FD';
+  200: '#B9C9FD',
   /**
    * Preview: ![secondary 300]
    */
-  300: '#95AAFA';
+  300: '#95AAFA',
   /**
    * Preview: ![secondary 400]
    */
-  400: '#7A91F6';
+  400: '#7A91F6',
   /**
    * Preview: ![secondary 500]
    */
-  500: '#4F6BF0';
+  500: '#4F6BF0',
   /**
    * Preview: ![secondary 600]
    */
-  600: '#3950CE';
+  600: '#3950CE',
   /**
    * Preview: ![secondary 700]
    */
-  700: '#273AAC';
+  700: '#273AAC',
   /**
    * Preview: ![secondary 800]
    */
-  800: '#19268B';
+  800: '#19268B',
   /**
    * Preview: ![secondary 900]
    */
-  900: '#0F1973';
+  900: '#0F1973',
 };
 
 export default secondary;
