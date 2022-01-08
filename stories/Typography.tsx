@@ -27,7 +27,10 @@ export const Typography = ({
   primary = false,
 }: TypographyProps) => (
   <ThemeProvider theme={darkTheme}>
-      <MuiTypography sx={VARIANT_DETAILS[variant]}>
+      <MuiTypography sx={{
+        ...VARIANT_DETAILS[variant],
+        color: primary ? 'primary.main': mode
+      }}>
         {children}
       </MuiTypography>
   </ThemeProvider>
